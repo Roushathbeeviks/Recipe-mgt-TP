@@ -1,0 +1,41 @@
+<app-adminnav></app-adminnav>
+<body>
+
+<!-- <ngx-datatable 
+ class="material"
+[limit]="8"
+[headerHeight]="50" 
+[footerHeight]="50"
+[scrollbarH]="true"
+[scrollbarV]="true"> -->
+
+<div class="search">
+  <div class="search-box">
+    <button class="btn-search"><i class="fas fa-search"></i></button>
+    <input type="text" class="input-search" placeholder="Type to Search...">
+  </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">RECIPE NAME</th>
+        <th scope="col">IMAGE</th>
+        <th scope="col">EDIT</th>
+        <th scope="col">DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of recipeeArray">
+        <td>{{item.recipename}}</td>
+        <td>image</td>
+        <td><button class="btn btn-link" (click)="edit()"><i class='far fa-edit' style='font-size:24px' ></i></button></td>
+        <td><button class="btn btn-link" (click)="delete(item._id)"><i class='fas fa-trash' style='font-size:24px'></i></button></td>
+   
+      </tr>
+    </tbody>
+  </table>
+
+
+<!-- </ngx-datatable> -->
+</body>

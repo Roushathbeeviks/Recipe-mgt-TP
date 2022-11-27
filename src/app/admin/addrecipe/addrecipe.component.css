@@ -1,0 +1,35 @@
+main
+{
+    
+   
+}
+.card
+{
+    height: 80vh;
+    /* margin-left: 30rem; */
+}  
+
+h2{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+span
+{
+    text-transform: uppercase;
+}
+
+.inputBox
+{
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: 30rem;
+   padding-right: 10px;
+    
+}
+.add
+{
+    margin-top: 10px;
+    margin-left: 35rem;
+}

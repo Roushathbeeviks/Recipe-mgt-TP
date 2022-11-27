@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+
+<section class="main">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        
+            <form #f="ngForm" *ngIf="!isLoggedIn" name="form"(ngSubmit)="f.form.valid && onSubmit()">
+              <h1>login</h1>
+
+             <div>
+              <input class="input--style-3"
+               type="email" placeholder="Email"
+                name="email" autocomplete="off" 
+                ngModel email  required
+               #email="ngModel"  [(ngModel)]="form.email " [ngClass]="{ 'is-invalid': f.submitted && email.errors }">
+                       <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
+                        Email Id is required!
+                      </div>
+              </div>
+
+              <div>
+               <input class="input--style-3" type="password" placeholder="Enter password" name="password"  [(ngModel)]="form.password"
+                    required
+                    minlength="6"
+                    #password="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
+                   <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
+                      <div *ngIf="password.errors['required']">Password is required</div>
+                      <div *ngIf="password.errors['minlength']">Password must be at least 6 characters</div>
+                   </div>
+            </div>
+              <div>
+              <button type="submit">Login</button>
+              </div>
+      
+              <div class="sub">
+                  <a [routerLink]="['/register']" id="fp">Create new account</a>    
+              </div>
+        
+         
+    
+     </form>
+     </div></div></div>
+    
+    
+</section>

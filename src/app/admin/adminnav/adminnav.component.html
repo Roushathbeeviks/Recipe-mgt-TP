@@ -1,0 +1,41 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          </a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mb-3">
+              <a  aria-current="page" [routerLink]="['/']">HOME</a>
+              <li class="nav-item"><a href="#c">VIEW RECIPES</a> </li>
+              <li class="nav-item"><a  [routerLink]="['/addrecipe']">ADD RECIPES</a> </li>
+              <li class="nav-item"><a href="#c">VIEW COMMENTS</a> </li>
+              <li class="nav-item"><a href="#a">VIEW GRAPH</a> </li>
+           
+          </ul>
+          <ul>
+            <li class="nav-item"><a href="#a">ABOUT US</a> </li>
+            <li class="nav-item"><a href="#c">CONTACT US</a> </li>
+         <li><li class="nav-item"><a [routerLink]="['/']" (click)="logout()">LOGOUT</a> </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
+    <script src="" async defer></script>
+  </body>
+</html>
+    

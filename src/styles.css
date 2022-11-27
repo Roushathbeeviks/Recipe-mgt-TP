@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+ /* @import "~bootstrap-icons/font/bootstrap-icons.css";  */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~ngx-toastr/toastr';
+
+
+*{
+    margin: 0;
+    padding: 0;
+ 
+    
+    
+  }
+  html
+  {
+    scroll-behavior: smooth;
+  }
+html, body
+ {
+   
+   }
+
+body 
+{
+   margin: 0;  }

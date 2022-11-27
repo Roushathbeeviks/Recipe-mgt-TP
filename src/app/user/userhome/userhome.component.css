@@ -1,0 +1,13 @@
+.cards {
+  margin: 0 5% 0;
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 75px));
+  grid-gap: 40px;
+  /* align-items: center; */
+}
+.container
+{
+  width: 15rem;
+  height: 35rem;
+}

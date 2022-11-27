@@ -1,0 +1,61 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+*{
+    list-style: none;
+    
+}
+
+nav
+{
+    background-color: rgb(61, 83, 69);
+    height: 40px;
+}
+
+nav ul li
+{
+    display: inline;
+}
+
+nav ul li a
+{
+    /* margin-top: 10px; */
+    color: white;
+    margin: 2px;
+    padding: 10px;
+   /* padding-top: 5px;  */
+  /* padding-bottom: 15px; */
+    
+
+
+}
+ a:hover
+{
+    
+    background: rgb(43, 40, 40);
+    transition: .5s ;
+    border-radius: 10px;
+    width: 10px;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+
+  #mybtn{
+    /*    display: none;*/
+        position:fixed;
+        bottom: 60px;
+        right: 20px;
+        z-index: 99;
+        border: none;
+        color: black;
+        background:white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+  #mybtn:hover{
+        color: #191c1d;
+  }
+
