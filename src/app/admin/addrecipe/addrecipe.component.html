@@ -3,7 +3,7 @@
     <h2>ADD RECIPE</h2>
 
     <div class="card">
-      <form enctype="multipart/form-data">
+      <form  (ngSubmit)="add()">
         <div class="inputBox">
           <span>Recipe ID</span>
           <input class="name" type="text" placeholder="Enter Recipe id" name="recipeid"  min="1" ngModel required #recipeid="ngModel" [(ngModel)]="data.recipeid"> 
@@ -20,17 +20,15 @@
       </div>
 
       <div class="inputBox">
-        <div class="inputBox">
-          <input #imageInput
-          type="file"
-          accept="image/*"
-          (change)="processFile(imageInput)">
-          <!-- <span>Choose pizza pic</span> -->
+        <form [formGroup]="form" (ngSubmit)="upload()">
+          <input  type="file" (change)="uploadFile($event)">
+          <button  class="btn btn-success" type="submit">Upload</button>
+        </form>
         </div>
-        <div *ngIf="imageData">
+        <!-- <div *ngIf="imageData">
           <img [src]="imageData" alt="" style="width: 150px">
         </div>
-      </div>
+      </div> -->
 
       <div class="inputBox">
         <span>Count Of Ingredients</span>
@@ -48,7 +46,7 @@
       </div>
    
     <div class="add">
-      <button type="button" class="btn btn-success" (click)="add()">ADD</button>
+      <button type="submit" class="btn btn-success">ADD</button>
   </div>
 </form>
   </div>

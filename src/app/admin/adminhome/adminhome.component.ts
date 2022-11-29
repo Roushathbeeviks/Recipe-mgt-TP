@@ -19,7 +19,6 @@ export class AdminhomeComponent implements OnInit {
     this.adminserv.getrecipe().subscribe((res)=>
     {
       this.recipeeArray=res
-      console.log(this.recipeeArray)
 
     })
   }
