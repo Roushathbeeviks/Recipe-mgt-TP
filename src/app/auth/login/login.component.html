@@ -3,13 +3,14 @@
 
 <section class="main">
   <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        
+     
             <form #f="ngForm" *ngIf="!isLoggedIn" name="form"(ngSubmit)="f.form.valid && onSubmit()">
-              <h1>login</h1>
+              <i class="bi bi-person-circle"></i>
+              <h2>login</h2>
 
+            <div class="frame">
              <div>
+              
               <input class="input--style-3"
                type="email" placeholder="Email"
                 name="email" autocomplete="off" 
@@ -32,17 +33,18 @@
                    </div>
             </div>
               <div>
-              <button type="submit">Login</button>
+              <button class="btn btn-success" type="submit">Login</button>
               </div>
       
               <div class="sub">
                   <a [routerLink]="['/register']" id="fp">Create new account</a>    
               </div>
+              </div>
         
          
     
      </form>
-     </div></div></div>
+     </div>
     
     
 </section>

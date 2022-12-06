@@ -26,6 +26,10 @@ export class AddrecipeComponent implements OnInit {
     ingredients:"",
     steps:""
   }
+  Ingredient:string[] = [];
+  Ing:string=""
+  id:any
+
   form = this.fb.group
   ({
     pic: [null],
@@ -58,17 +62,17 @@ export class AddrecipeComponent implements OnInit {
     var formData: any = new FormData();
     //@ts-ignore
     formData.append('pic', this.form.get('pic').value);
-    this.http.post('http://localhost:3000/adminside/upload', formData)
-      .subscribe(
-      {
-        next: (response) => console.log(response),
-        error: (error) => console.log(error),
-        
-
-      })
+    this.adminserv.uploadImage(formData).subscribe((res)=>
+    {
+      console.log(res)
+    })
         
  };
   
+ onClick(){
+  this.Ingredient.push(this.data.ingredients)
+  console.log(this.data.ingredients)
+}
 
 add()
 {

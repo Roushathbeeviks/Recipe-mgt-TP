@@ -1,0 +1,55 @@
+<app-adminnav></app-adminnav>
+<body>
+<section class="main">
+ <h2>ADD RECIPE</h2>
+
+    <div class="card">
+      <form  (ngSubmit)="add()">
+        <div class="inputBox">
+          <span>Recipe ID</span>
+          <input class="name" type="text" placeholder="Enter Recipe id" name="recipeid"  min="1" ngModel required #recipeid="ngModel" [(ngModel)]="data.recipeid"> 
+        </div>
+  
+    <div class="inputBox">
+        <span>Recipe Name </span>
+        <input class="name" type="text" placeholder="Enter Recipe name" name="recipename"  min="1" ngModel required #recipename="ngModel" [(ngModel)]="data.recipename"> 
+      </div>
+
+      <div class="inputBox">
+        <span>Cooking Time</span>
+        <input type="number" placeholder="Enter Cooking time(in min)" name="recipename"  min="1" ngModel required #recipename="ngModel" [(ngModel)]="data.cookingtime"> 
+      </div>
+
+      <div class="inputBox">
+        <form [formGroup]="form" (ngSubmit)="upload()">
+          <input  type="file" (change)="uploadFile($event)">
+          <button  class="uploadbutton" type="submit">Upload</button>
+        </form>
+        </div>
+        <!-- <div *ngIf="imageData">
+          <img [src]="imageData" alt="" style="width: 150px">
+        </div>
+      </div> -->
+
+      <div class="inputBox">
+        <span>Count Of Ingredients</span>
+        <input type="number" placeholder="Enter no:of Ingredients" name="recipeingredients"  min="1" ngModel required #recipeingredients="ngModel" [(ngModel)]="data.count"> 
+      </div>
+
+      <div class="inputBox">
+        <span>Ingredients</span>
+        <textarea type="text" placeholder="Enter ingredients " name="recipeing"  min="1" ngModel required #recipeing="ngModel" [(ngModel)]="data.ingredients"></textarea> 
+      </div>
+
+      <div class="inputBox">
+        <span>Steps</span>
+        <textarea type="text" placeholder="Enter steps" name="recipesteps"  min="1" ngModel required #recipesteps="ngModel" [(ngModel)]="data.steps">></textarea> 
+      </div>
+   
+    <div class="add">
+      <button type="submit" class="addbutton">ADD</button>
+  </div>
+</form>
+  </div>
+</section>
+</body>

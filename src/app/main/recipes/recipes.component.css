@@ -1,0 +1,92 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto  auto auto;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+.grid-item {
+  background-color:whitesmoke;
+  padding: 20px;
+  text-align: center;
+}
+img 
+{
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  
+}
+
+.card 
+{
+    width: 15rem;
+    flex: 0 0 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(17, 4, 4, 0.4);
+
+  } 
+  
+.card:hover 
+{
+  transform: translateY(-1px) scale(1.1) translateZ(0);
+  color: rgb(0, 0, 0);
+
+}
+
+h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+}
+/* h1:hover
+{
+  color: rgb(87, 42, 146);
+} */
+.display
+{
+    margin-left: 22px;
+}
+.display p
+{
+  font-size: 18px;
+}
+.comment button
+{
+  color: black;
+  background-color:rgb(115, 187, 187) ;
+  width: 150px;
+  height: 25px;
+  margin-left: 5px;
+  align-items: center;
+  border-radius: 5px;
+ 
+}
+.comment .button p{
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.download button
+{
+  color: black;
+  background-color:rgb(115, 187, 187) ;
+  width: 150px;
+  height: 25px;
+  margin-top: 3px;
+  margin-left: 5px;
+  align-items: center;
+  border-radius: 5px;
+ 
+}
+.download .button p{
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+

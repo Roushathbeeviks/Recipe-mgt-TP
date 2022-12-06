@@ -61,7 +61,8 @@ export class LoginComponent implements OnInit {
             this.role="Admin"
           } else {
             this.toastr.success('Logged  Succesfully', 'success');
-            this.routes.navigate(['/userhome']);
+            this.routes.navigate(['/loggeduserhome']);
+            sessionStorage.setItem('loggedEmp_id', this.form.email);
       
           }
         } else {

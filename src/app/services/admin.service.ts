@@ -22,20 +22,28 @@ export class AdminService {
 
   createRecipe(data:any)
   {
-    console.log(data)
     return this.httpclient.post<any>(this.URL+'/addrecipe',data)
     
+  }
+  getrecipebyid(id:any)
+  {
+    return this.httpclient.get<any>(this.URL+'/addrecipe/'+id)
   }
 
   deleterecipe(id:any)
   {
-    return this.httpclient.delete(this.URL+'/addrecipe/'+id,this.httpOptions)
+    return this.httpclient.delete(this.URL+'/addrecipe/'+id)
   }
-  uploadImage(image:File)
+  uploadImage(body?:any)
   {
-    var formData: any = new FormData();
-    //@ts-ignore
-    formData.append('pic', this.form.get('pic').value);
-    return this.httpclient.post(this.URL+ '/upload', formData);
+
+    return this.httpclient.post(this.URL+ '/upload',body);
+  }
+  editrecipebyid(id:any, data:any){
+    return this.httpclient.put<any>(this.URL+'/edit/'+id, data);
+  }
+  getImage()
+  {
+    return this.httpclient.get<any>(this.URL+'/upload')
   }
 }

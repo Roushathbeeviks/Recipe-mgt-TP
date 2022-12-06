@@ -1,0 +1,35 @@
+<app-loggednav></app-loggednav>
+    <div class="container">
+        <div  id="pdfTable" #pdfTable>
+        <div class="card">
+            <h2>{{Recipename}}</h2>
+            <div class="flex">
+                <p><i class="bi bi-clock">Prep Time: {{Cookingtime}}(in minutes)</i></p>
+                <p><i class="bi bi-list-nested">Ingredients:{{Count}}</i></p>
+            </div>
+            <div class="display">
+            <div class="ingredients">
+                <span>Ingredients:</span>
+                <ul>
+                    <li *ngFor="let ing of Ing">{{ing}}</li>
+                </ul>
+           </div>
+         
+             <div class="steps">
+            <span>Steps:</span>
+            <ul>
+                <li *ngFor="let step of steps">{{step}}</li>
+            </ul>
+            <!-- <i class="bi bi-download"></i> -->
+        </div>
+        
+    </div>
+    <div class="download">
+       <i class="bi bi-download" (click)="download()"></i>
+    </div>
+        </div>
+    <!-- <button class="btn btn-primary" (click)="download()">download</button> -->
+
+    
+
+

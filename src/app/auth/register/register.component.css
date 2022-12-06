@@ -1,9 +1,10 @@
 .main
 {
     height: 100vh;
-    background-image: linear-gradient(to right, rgba(115, 143, 106, 0), rgb(50, 92, 61));
- 
+    background-image: linear-gradient(to right, rgba(115, 143, 106, 0), rgb(39, 46, 41));
 }
+ 
+
 body{
     
     background-color: #080710;
@@ -50,7 +51,7 @@ label{
 }
 input{
     display: block;
-    height: 50px;
+    height: 30px;
     width: 100%;
     background-color: rgba(59, 57, 57, 0.07);
     border-radius: 3px;
@@ -98,4 +99,10 @@ text-decoration: none;
 color: steelblue;
 padding-left: 10px;
 }
-  
+.sub a{
+    text-decoration: none;
+    color: steelblue;
+    margin-top: 10px;
+    padding-left: 130px;
+    }
+       

@@ -1,15 +1,56 @@
 <app-adminnav></app-adminnav>
 <body>
+  <div class="search">
+    <div class="search-box">
+      <button class="btn-search"><i class="fas fa-search"></i></button>
+      <input type="text" class="input-search" placeholder="Type to Search...">
+    </div>
+  </div>
 
-<!-- <ngx-datatable 
- class="material"
-[limit]="8"
-[headerHeight]="50" 
-[footerHeight]="50"
-[scrollbarH]="true"
-[scrollbarV]="true"> -->
 
-<div class="search">
+  <ngx-datatable style="height: auto;"
+    class="bootstrap"
+    [rows]="rows" 
+    [columns]="columns" 
+    fixed-header 
+    datatable-header
+    [headerHeight]="50"
+    [footerHeight]="50" 
+    [limit]=10 
+    [columnMode]="'standard'" 
+    [reorderable]="false">
+    
+
+  <ngx-datatable-column name="RecipeName" prop="recipename" [width]=250 [sortable]='true'>
+      <ng-template let-column="column" ngx-datatable-header-template>RECIPE NAME</ng-template>
+  </ngx-datatable-column>
+
+ <ngx-datatable-column name="EDIT" [minWidth]="140" [flexGrow]="3" [sortable]='false' [resizeable]="false"[draggable]="false" prop="edit">
+      <ng-template  let-row="row" let-value="value" ngx-datatable-cell-template>
+            <span   md-icon-button class="action-buttons cursor text-center" placement="left" ngbTooltip="Edit" (click)="edit()">
+                 <i class='far fa-edit'  ></i>
+            </span>
+       </ng-template>
+ </ngx-datatable-column>
+
+ <ngx-datatable-column name="DELETE" [minWidth]="140" [flexGrow]="3" [sortable]="false" [resizeable]="false" [draggable]="false" prop="delete">
+      <ng-template  let-row="row" let-value="value" ngx-datatable-cell-template>
+        <span class="delete" md-icon-button class="action-buttons cursor text-center" placement="left" ngbTooltip="Delete"  (click)='delete($event,row)'>
+            <i class="fa fa-trash  push-top5 push-right8" aria-hidden="true"></i>
+        </span>
+      </ng-template>  
+ </ngx-datatable-column>
+             
+
+
+</ngx-datatable>
+
+
+
+
+
+
+<!-- <div class="search">
   <div class="search-box">
     <button class="btn-search"><i class="fas fa-search"></i></button>
     <input type="text" class="input-search" placeholder="Type to Search...">
@@ -34,8 +75,7 @@
    
       </tr>
     </tbody>
-  </table>
+  </table> -->
 
 
 <!-- </ngx-datatable> -->
-</body>

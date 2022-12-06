@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="grid-container">
+<div class="card" *ngFor="let item of recipeArray;let i=index">
+    <div class="grid-item">
+    
+  <img src="../../../assets/adminimages/{{ImageArray[i].imagename}}" class="card-img-top" alt="...">
+    
+        <h1>{{item.recipename}}</h1>
+    <div class="display">
+        <p><i class="bi bi-clock">Prep Time: {{item.cookingtime}}</i></p>
+        <p><i class="bi bi-list-nested">Ingredients:{{item.count}}</i></p>
+    </div>
+
+    <div class="comment">
+      <button routerLink="/login"> <p style="text-align:center;"><i class="bi bi-chat-dots"> Drop your Comments</i></p></button>
+    </div>
+  <div class="download">
+    <button routerLink="/login"><i class="bi bi-download"> Download here</i></button>
+    
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="main">
+  <div class="card" style="width: 18rem;" *ngFor="let item of recipeArray;let i=index">
+      <div class="card-body">
+      
+    <img src="../../../assets/adminimages/{{ImageArray[i].imagename}}" class="card-img-top" alt="...">
+      
+          <h1>{{item.recipename}}</h1>
+      <div class="display">
+          <p><i class="bi bi-clock">Prep Time: {{item.cookingtime}}</i></p>
+          <p><i class="bi bi-list-nested">Ingredients:{{item.count}}</i></p>
+      </div>
+  
+      <div class="comment">
+        <button routerLink="/login"> <p style="text-align:center;"><i class="bi bi-chat-dots"> Drop your Comments</i></p></button>
+      </div>
+    <div class="download">
+      <button routerLink="/login"><i class="bi bi-download"> Download here</i></button>
+      
+    </div>
+      </div>
+    </div>
+  </div> -->
+
+   

@@ -1,0 +1,13 @@
+  <app-loggednav></app-loggednav>
+    <div class="CommentFrom">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <h1>Drop Your Commments</h1>
+          <div class="inputBox">
+            <textarea name="msg" id="" cols="" rows="" placeholder="Your Comment" ngModel required #msg="ngModel"  autocomplete="off"></textarea>
+          </div>
+          <div class="inputBox">
+            <input type="submit" class="btn btn-success" name="" [disabled]="f.invalid" value="Post Comment" required="required">
+          </div>
+        </form>
+      </div>
+

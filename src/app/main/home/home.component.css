@@ -1,7 +1,7 @@
 body{
    height: 100vh;
-   background-image: url(../../../assets/images/f2.jpg);
-    opacity: 80%;
+    background-image: url(../../../assets/images/strawberry.jpg);
+    opacity: 90%;
     margin: 0px;
     padding: 0px;
     width: 100vw;
@@ -9,16 +9,58 @@ body{
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    position: fixed;
     /* align-items: center; */
     font-family: 'Lato' !important;
   }
-  .search
+
+  .card
   {
-    /* position: fixed; */
+    width: 30%;
+    height: 50%;
+    margin-top: 100px;
+    background-color: #f7f1f1;
+    box-shadow: 10px 10px rgb(10, 10, 10);
+
+  }
+  h2
+  {
+    color: #030207;
+    font-weight: 400px;
+    margin-top: 10px;
+    text-align: center;
+
+  }
+  p
+  {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: larger;
+    text-align: center;
+
+  }
+
+  button
+  {
+    width: 30%;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #e2e7e0;
+  }
+button:hover{
+  background-color: rgb(1, 68, 1);
+  color: #e2e7e0;
+}
+  
+
+  /* .search
+  {
+   
     margin-left: 50px;
    
   }
-  .search-box{
+  .search-box
+  {
    
     width: fit-content;
     height: fit-content;
@@ -73,37 +115,4 @@ body{
     border-bottom:1px solid rgba(255,255,255,.5);
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
-  
-  .card
-  {
-    width: 30%;
-    height: 50%;
-    margin-top: 100px;
-    background-color: #f7f1f1;
-    box-shadow: 10px 10px rgb(28, 145, 53);
-
-  }
-  h2
-  {
-    color: #030207;
-    font-weight: 400px;
-    margin-top: 10px;
-    text-align: center;
-
-  }
-  p
-  {
-    color: rgb(0, 0, 0);
-    font-weight: 400;
-    font-size: larger;
-    text-align: center;
-
-  }
-
-  button
-  {
-    width: 30%;
-    align-self: center;
-    border-radius: 10px;
-    background-color: #40d622;
-  }
+   */

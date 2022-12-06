@@ -21,15 +21,10 @@
 
       <div class="inputBox">
         <form [formGroup]="form" (ngSubmit)="upload()">
-          <input  type="file" (change)="uploadFile($event)">
-          <button  class="btn btn-success" type="submit">Upload</button>
+          <input  type="file" (change)="uploadFile($event)" name="recipeimage">
+          <button  class="btn btn-success" type="submit">UPLOAD</button>
         </form>
         </div>
-        <!-- <div *ngIf="imageData">
-          <img [src]="imageData" alt="" style="width: 150px">
-        </div>
-      </div> -->
-
       <div class="inputBox">
         <span>Count Of Ingredients</span>
         <input type="number" placeholder="Enter no:of Ingredients" name="recipeingredients"  min="1" ngModel required #recipeingredients="ngModel" [(ngModel)]="data.count"> 
@@ -37,12 +32,28 @@
 
       <div class="inputBox">
         <span>Ingredients</span>
-        <input type="text" placeholder="Enter ingredients " name="recipeing"  min="1" ngModel required #recipeing="ngModel" [(ngModel)]="data.ingredients"> 
+        <textarea class="textarea" type="text" placeholder="Enter ingredients " name="recipeing"  min="1" ngModel required #recipeing="ngModel" [(ngModel)]="data.ingredients"></textarea> 
       </div>
+
+      <!-- <div>
+        <div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="enter grocery items" id="txtSearch"  name="recipeing"  min="1" ngModel required #recipeing="ngModel" [(ngModel)]="data.ingredients"/>
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" type="button" (click)="onClick()">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="list-group">
+      <li *ngFor="let item of Ingredient" class="list-group-item">
+          <span> {{item}} </span>
+      </li>
+  </ul> -->
 
       <div class="inputBox">
         <span>Steps</span>
-        <input type="text" placeholder="Enter steps" name="recipesteps"  min="1" ngModel required #recipesteps="ngModel" [(ngModel)]="data.steps"> 
+        <textarea class="textarea1" type="text" placeholder="Enter steps" name="recipesteps"  min="1" ngModel required #recipesteps="ngModel" [(ngModel)]="data.steps">></textarea> 
       </div>
    
     <div class="add">

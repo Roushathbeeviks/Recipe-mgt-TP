@@ -1,19 +1,19 @@
 .main
 {
     height: 100vh;
-    background-image: linear-gradient(to right, rgba(115, 143, 106, 0), rgb(50, 92, 61));
+    background-image: linear-gradient(to right, rgba(115, 143, 106, 0), rgb(39, 46, 41));
  }
- h1{
+ h2{
     margin-top: 0px;
-    margin-left: 70px;
+    text-align: center;
+    font-weight: bold;
     text-transform: uppercase;
  }
 
  form{
-    margin-top: 25px;
-    height: 400px;
+    height: 350px;
     width: 300px;
-    background-color: rgba(255,255,255,0.13);
+    background-color: rgba(245, 238, 238, 0.13);
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -30,28 +30,29 @@ form *{
     letter-spacing: 0.5px;
     outline: none;
     border: none;
-}
-form h1{
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 42px;
-    margin-left: 50px;
-    text-transform: uppercase;
+    align-items: center;
 }
 
+.frame
+{
+    margin-top: 10%;
+    /* margin-bottom: 50%;
+} 
+
 label{
-    display: block;
-    margin-top: 30px;
+    /* display: block; */
+    /* margin-top: 30px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 500; */
+
 
 }
 input{
     display: block;
-    height: 50px;
+    height: 25px;
     width: 100%;
-    background-color: rgba(59, 57, 57, 0.07);
-    border-radius: 3px;
+    background-color: rgba(228, 217, 217, 0.07);
+    /* border-radius: 3px; */
     padding: 0 10px;
     margin-top: 8px;
     font-size: 14px;
@@ -61,23 +62,17 @@ input{
     color: #111111;
     font-weight: 500;
 }
-button{
-    margin-left: 70PX;
+
+.btn
+{
     margin-top: 10px;
-    width: 30%;
-    height: 20%;
-    background-color: #e9e6e6;
-    color: #030303;
-    padding: 15px 0;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-left: 70PX;
+
 }
-button:hover
+/* button:hover
 {
   background-color:rgb(75, 180, 75);
-}
+} */
 
 .sub{
   padding-left: 10px;
@@ -86,7 +81,10 @@ button:hover
 }
 .sub a{
 text-decoration: none;
-color: steelblue;
+color: rgb(10, 10, 10);
 padding-left: 10px;
 }
   
+i{
+   font-size: larger;
+} 
