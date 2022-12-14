@@ -21,7 +21,6 @@ const routes: Routes = [
   { path: '', component:HomeComponent},
   {path:'login', component:LoginComponent},
   {path:'userhome', component:UserhomeComponent},
-  {path:'edit', component:AdmineditComponent},
   {path:'register', component:RegisterComponent},
   {path:'aboutus', component:AboutusComponent},
   {path:'contactus', component:ContactusComponent},
@@ -29,6 +28,7 @@ const routes: Routes = [
   {path:'loggeduserhome', component:LogrecipesComponent},
   {path:'loggedusercomment', component:LogcommentComponent},
   {path:'loggeduserdownload/:id', component:LogdownloadComponent},
+  {path:'edit/:id', component:AdmineditComponent},
 
 
   {path:'adminhome', component:AdminhomeComponent},

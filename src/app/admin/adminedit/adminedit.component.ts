@@ -12,7 +12,7 @@ export class AdmineditComponent implements OnInit {
 
   data=
   {
-    recipeid:"",
+    // recipeid:"",
     recipename:"",
     cookingtime:"",
     count:"",
@@ -34,13 +34,16 @@ export class AdmineditComponent implements OnInit {
   ngOnInit(): void
   {
     this.id=this.route.snapshot.paramMap.get('id')
-    console.log(this.id)
+    // console.log(this.id)
     if(this.id)
     {
       this.adminserv.getrecipebyid(this.id).subscribe((res)=>
       {
-        this.data = res
-        console.log(res)
+        this.data.recipename = res.recipename
+        this.data.cookingtime=res.cookingtime
+        this.data.count = res.count
+        this.data.ingredients= res.ingredients
+        this.data.steps=res.steps
       })
     }
 
@@ -71,11 +74,14 @@ export class AdmineditComponent implements OnInit {
  };
   add()
   {
+
+    console.log("entered")
     if(this.id)
     {
       this.adminserv.editrecipebyid(this.id,this.data).subscribe((res)=>
       {
         console.log(res)
+        this.routes.navigate(['/adminhome'])
       })
     }
   }

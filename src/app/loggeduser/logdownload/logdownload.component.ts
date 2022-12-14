@@ -28,7 +28,7 @@ export class LogdownloadComponent implements OnInit {
   Steps:string=""
 
   id:any
-
+  
 
   @ViewChild('pdfTable')
   pdfTable!: ElementRef;
@@ -38,7 +38,7 @@ export class LogdownloadComponent implements OnInit {
   ngOnInit(): void 
   {
     this.id=this.route.snapshot.paramMap.get('id')
-       console.log(this.id)
+      //  console.log(this.id)
        if(this.id)
        {
          this.adminserv.getrecipebyid(this.id).subscribe((res:any)=>
@@ -50,7 +50,7 @@ export class LogdownloadComponent implements OnInit {
               this.Count=res.count
               this.Ingredients=res.ingredients
               this.Steps=res.steps
-
+              
               
          })
         }

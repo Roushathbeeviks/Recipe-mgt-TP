@@ -51,7 +51,7 @@ input{
     display: block;
     height: 25px;
     width: 100%;
-    background-color: rgba(228, 217, 217, 0.07);
+    background-color: rgba(59, 57, 57, 0.07);
     /* border-radius: 3px; */
     padding: 0 10px;
     margin-top: 8px;
@@ -85,6 +85,3 @@ color: rgb(10, 10, 10);
 padding-left: 10px;
 }
   
-i{
-   font-size: larger;
-} 

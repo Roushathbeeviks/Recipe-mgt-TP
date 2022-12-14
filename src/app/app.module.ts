@@ -5,8 +5,11 @@ import { ToastrModule } from 'ngx-toastr';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
-import{NgxDatatableModule} from '@swimlane/ngx-datatable'
-
+import{NgxDatatableModule} from '@swimlane/ngx-datatable';
+// import { MatBasicComponent } from './mat-basic/mat-basic.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+// import { SimpleModalModule } from 'ngx-simple-modal';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -59,7 +62,7 @@ import { LoggednavComponent } from './loggeduser/loggednav/loggednav.component';
     LogrecipesComponent,
     LogcommentComponent,
     LogdownloadComponent,
-    LoggednavComponent,
+    LoggednavComponent
 
 
     
@@ -75,9 +78,11 @@ import { LoggednavComponent } from './loggeduser/loggednav/loggednav.component';
     ReactiveFormsModule ,
     HttpClientModule,
     FileUploadModule,
-    NgxDatatableModule
-  
-
+    NgxDatatableModule,
+    MatDialogModule,
+    MatButtonModule,
+    // SimpleModalModule,
+   
   ],
 
   providers: [],

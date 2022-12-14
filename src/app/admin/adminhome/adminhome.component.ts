@@ -16,7 +16,7 @@ export class AdminhomeComponent implements OnInit {
   columnMode='standard';
   columns = [];
   ColumnMode = ColumnMode;
-
+  idi:any=[]
 
 
   constructor(private adminserv:AdminService,private toastr:ToastrService,private router:Router) { }
@@ -26,16 +26,14 @@ export class AdminhomeComponent implements OnInit {
     this.adminserv.getrecipe().subscribe((res)=>
     {
       this.rows=res
-
+      console.log(res)
+      
     })
+
+
   }
  
-  edit()
-  {
-    // console.log("edit clicked")
-    this.router.navigate(['/edit'])
 
-  }
 
   delete($event:any,id:any) 
  {

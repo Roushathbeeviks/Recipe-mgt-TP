@@ -39,11 +39,21 @@ export class AdminService {
 
     return this.httpclient.post(this.URL+ '/upload',body);
   }
+
   editrecipebyid(id:any, data:any){
-    return this.httpclient.put<any>(this.URL+'/edit/'+id, data);
+    return this.httpclient.put<any>(this.URL+'/editrecipe/'+id, data);
   }
+
   getImage()
   {
     return this.httpclient.get<any>(this.URL+'/upload')
+  }
+  postcomment(commenting:string)
+  {
+    return this.httpclient.post<any>(this.URL+'/commented',{commenting})
+  }
+  getcomment()
+  {
+    return this.httpclient.get<any>(this.URL+'/commented')
   }
 }

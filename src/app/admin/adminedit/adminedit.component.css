@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    background-color: rgb(112, 109, 109);
+    /* background-color: rgb(112, 109, 109); */
     margin: 0px;
      padding: 0px;
      width: 100vw;
@@ -25,7 +25,7 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    font-size: 35px;
+    /* font-size: 20px; */
     background-color: aliceblue;
     border-radius: 10px;
    
@@ -40,17 +40,17 @@ body{
     display: flex;
     flex-direction: column;
 }
-.uploadbutton
+/* .uploadbutton
 {
     color: rgb(15, 15, 15);
     background-color:  rgb(0, 109, 5);
     border-radius: 4px;
     margin-top: 2px;
-}
+} */
 .addbutton
 {
     color: rgb(15, 15, 15);
-    background-color: rgb(0, 109, 5);
+    background-color: rgb(236, 243, 237);
     border-radius: 4px;
     margin-top: 10px;
    margin-left: 250px;

@@ -25,9 +25,9 @@
       <ng-template let-column="column" ngx-datatable-header-template>RECIPE NAME</ng-template>
   </ngx-datatable-column>
 
- <ngx-datatable-column name="EDIT" [minWidth]="140" [flexGrow]="3" [sortable]='false' [resizeable]="false"[draggable]="false" prop="edit">
-      <ng-template  let-row="row" let-value="value" ngx-datatable-cell-template>
-            <span   md-icon-button class="action-buttons cursor text-center" placement="left" ngbTooltip="Edit" (click)="edit()">
+ <ngx-datatable-column name="EDIT" [minWidth]="140" [flexGrow]="3" [sortable]='false'  [resizeable]="false"[draggable]="false" prop="edit">
+      <ng-template  let-row="row" let-value="value" ngx-datatable-cell-template  >
+            <span  md-icon-button class="action-buttons cursor text-center" placement="left" ngbTooltip="Edit" [routerLink]="['/edit/',row._id]">
                  <i class='far fa-edit'  ></i>
             </span>
        </ng-template>
@@ -39,10 +39,7 @@
             <i class="fa fa-trash  push-top5 push-right8" aria-hidden="true"></i>
         </span>
       </ng-template>  
- </ngx-datatable-column>
-             
-
-
+ </ngx-datatable-column>             
 </ngx-datatable>
 
 

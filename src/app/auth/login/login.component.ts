@@ -27,8 +27,11 @@ export class LoginComponent implements OnInit {
   isLoggedIn = false;
   isLoginFailed = false;
   msg = '';
+  message:any=[]
   isadmin = false;
-  role:any=""
+  role:any="";
+  avail=false;
+  setTimeout: any;
 
   constructor(
     private authserv: AuthService,
@@ -37,7 +40,7 @@ export class LoginComponent implements OnInit {
     private toastr: ToastrService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   onSubmit() {
     const { email, password } = this.form;
     this.authserv.login(email, password).subscribe({
@@ -62,13 +65,18 @@ export class LoginComponent implements OnInit {
           } else {
             this.toastr.success('Logged  Succesfully', 'success');
             this.routes.navigate(['/loggeduserhome']);
-            sessionStorage.setItem('loggedEmp_id', this.form.email);
+            sessionStorage.setItem('email', this.form.email);
       
           }
         } else {
           this.msg = data.Success;
-          alert(this.msg);
+          this.message="Email is not registered"
+          this.avail=true
+          alert(this.message)
+          // this.toastr.warning("Email is not registered","warning")
+         
           this.reloadPage();
+
           // this.routes.navigate(['/login'])
         }
       },
@@ -78,8 +86,9 @@ export class LoginComponent implements OnInit {
       },
     });
   }
+  
 
   reloadPage(): void {
-    window.location.reload();
+    window.location.reload()
   }
 }

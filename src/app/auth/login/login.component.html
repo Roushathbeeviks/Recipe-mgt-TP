@@ -5,9 +5,10 @@
   <div class="container py-5 h-100">
      
             <form #f="ngForm" *ngIf="!isLoggedIn" name="form"(ngSubmit)="f.form.valid && onSubmit()">
-              <i class="bi bi-person-circle"></i>
               <h2>login</h2>
-
+              <div *ngIf="avail==false">
+             <p>{{message}}</p>
+            </div>
             <div class="frame">
              <div>
               
@@ -19,6 +20,7 @@
                        <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
                         Email Id is required!
                       </div>
+                      <!-- <div class="alert alert-danger" *ngIf="!avail">Email is already Registered</div> -->
               </div>
 
               <div>

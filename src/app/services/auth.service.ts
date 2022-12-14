@@ -33,6 +33,10 @@ export class AuthService {
       this.httpOptions
     );
   }
+  comment(comment: string)
+  {
+    return this.http.post(this.URL+'/comment',{comment}, this.httpOptions);
+  }
 
   logout(): Observable<any> {
     return this.http.post(this.URL + 'signout', {}, this.httpOptions);

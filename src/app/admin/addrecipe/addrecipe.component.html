@@ -4,10 +4,6 @@
 
     <div class="card">
       <form  (ngSubmit)="add()">
-        <div class="inputBox">
-          <span>Recipe ID</span>
-          <input class="name" type="text" placeholder="Enter Recipe id" name="recipeid"  min="1" ngModel required #recipeid="ngModel" [(ngModel)]="data.recipeid"> 
-        </div>
   
     <div class="inputBox">
         <span>Recipe Name </span>
@@ -16,7 +12,7 @@
 
       <div class="inputBox">
         <span>Cooking Time</span>
-        <input type="number" placeholder="Enter Cooking time(in min)" name="recipename"  min="1" ngModel required #recipename="ngModel" [(ngModel)]="data.cookingtime"> 
+        <input type="number" placeholder="Enter Cooking time(in min)" name="cookingtime"  min="1" ngModel required #recipename="ngModel" [(ngModel)]="data.cookingtime"> 
       </div>
 
       <div class="inputBox">
