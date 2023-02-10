@@ -20,7 +20,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  form: any = {
+  form:any = {
     email: '',
     password: '',
   };
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void { }
   onSubmit() {
-    const { email, password } = this.form;
+    const {email, password } = this.form;
     this.authserv.login(email, password).subscribe({
       next: (data) => {
         this.storageserv.saveUser(data);

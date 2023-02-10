@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders,HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class AuthService {
     this.URL = 'http://localhost:3000/userside';
   }
 
-  getdetails(email: string,username: string) {
+  getdetails(email: string, username: string) {
     return this.http.get(this.URL + '/register');
   }
   login(email: string, password: string): Observable<any> {
@@ -33,9 +33,8 @@ export class AuthService {
       this.httpOptions
     );
   }
-  comment(comment: string)
-  {
-    return this.http.post(this.URL+'/comment',{comment}, this.httpOptions);
+  comment(comment: string) {
+    return this.http.post(this.URL + '/comment', { comment }, this.httpOptions);
   }
 
   logout(): Observable<any> {

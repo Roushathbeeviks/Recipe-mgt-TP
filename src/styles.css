@@ -3,6 +3,7 @@
  @import "~bootstrap-icons/font/bootstrap-icons";
  @import "../node_modules/font-awesome/css/font-awesome.css";
 @import "~bootstrap/dist/css/bootstrap.css";
+
 @import "@swimlane/ngx-datatable/themes/bootstrap.css";
 @import '~ngx-toastr/toastr';
 *{
